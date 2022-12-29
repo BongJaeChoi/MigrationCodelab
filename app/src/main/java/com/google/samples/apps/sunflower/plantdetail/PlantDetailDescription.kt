@@ -60,6 +60,7 @@ private fun PlantDetailContent(plant: Plant) {
         Column(modifier = Modifier.padding(dimensionResource(id = R.dimen.margin_normal))) {
             PlantName(name = plant.name)
             PlantWateringHeader(wateringInterval = plant.wateringInterval)
+            PlantDescription(description = plant.description)
         }
     }
 }
@@ -134,7 +135,7 @@ fun PlantDescription() {
 @Preview
 @Composable
 fun PlantDetailContentPreView() {
-    val plant = Plant("id", "Apple", "description", 3, 30, "")
+    val plant = Plant("id", "Apple", "HTML<br><br><b>description</b/>", 3, 30, "")
     MaterialTheme {
         PlantDetailContent(plant = plant)
     }
