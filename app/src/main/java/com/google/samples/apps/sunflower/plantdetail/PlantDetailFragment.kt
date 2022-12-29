@@ -71,7 +71,7 @@ class PlantDetailFragment : Fragment() {
             }
             composeView.setContent {
                 MaterialTheme {
-                    PlantDetailDescription(viewModel)
+                    PlantDetailDescription(plantDetailViewModel)
                 }
             }
 
@@ -109,6 +109,7 @@ class PlantDetailFragment : Fragment() {
                         createShareIntent()
                         true
                     }
+
                     else -> false
                 }
             }
